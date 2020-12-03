@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginActivity"
+    tools:ignore="ExtraText">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/login"
+        android:textColor="@color/colorBlack"
+        android:textSize="25dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/emailEEt"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/emailEt"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/emailEEt"
+        android:id="@+id/passwordEEt"
+        app:passwordToggleEnabled="true">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:hint="@string/password"
+            android:id="@+id/passwordEt"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <Button
+        android:text="Login"
+        android:id="@+id/LoginBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/passwordEEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.CardView"
+        />
+
+    <TextView
+        android:id="@+id/no_have_accountTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You dont have an account? Register.."
+        android:textAlignment="center"
+        android:layout_below="@id/LoginBtn"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/Recover_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/no_have_accountTv"
+        android:layout_marginBottom="20dp"
+        android:text="Forgot your password ? Recover.."
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack" />
+
+</RelativeLayout>
